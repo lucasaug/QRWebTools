@@ -1,0 +1,14 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>QR Web Tools</title>
+        <script src={{ url_for('static', filename='js/htmx.min.js') }}></script>
+    </head>
+    <body>
+        <label for="qr-input">Insert text to be encoded: </label>
+        <input type="text" name="text" id="qr-input"
+            hx-target="#qr-code"
+            hx-post="/create_code"></input>
+        <div id="qr-code"/>
+    </body>
+</html>
