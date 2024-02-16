@@ -2,13 +2,17 @@
 <html>
     <head>
         <title>QR Web Tools</title>
-        <script src={{ url_for('static', filename='js/htmx.min.js') }}></script>
+        <script src={{ url_for("static", filename="js/htmx.min.js") }}></script>
+        <link rel="stylesheet" href={{ url_for("static", filename="css/style.css") }}></link>
     </head>
     <body>
-        <label for="qr-input">Insert text to be encoded: </label>
-        <input type="text" name="text" id="qr-input"
-            hx-target="#qr-code"
-            hx-post="/create_code"></input>
-        <div id="qr-code"/>
+        <main>
+            <h1>QR Code Tools</h1>
+            <input type="text" name="text" id="qr-input"
+               placeholder="Text to be encoded" maxlength="1000"
+                hx-target="#qr-code"
+                hx-post="/create_code"></input>
+            <div id="qr-code"/>
+        </main>
     </body>
 </html>

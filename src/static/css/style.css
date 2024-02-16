@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+main {
+    width: 50%;
+}
+
+main h1 {
+    text-align: center;
+}
+
+#qr-code {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+#qr-input {
+    width: 100%;
+}
