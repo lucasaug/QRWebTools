@@ -11,7 +11,18 @@
             <input type="text" name="text" id="qr-input"
                placeholder="Text to be encoded" maxlength="400"
                 hx-target="#qr-code"
+                hx-include="input"
                 hx-post="/create_code"></input>
+            <div id="options">
+                <div id="fg-control">
+                    <label for="fg-color">Code color</label>
+                    <input type="color" name="fg-color" value="#000000"></input>
+                </div>
+                <div id="bg-control">
+                    <label for="bg-color">Background color</label>
+                    <input type="color" name="bg-color" value="#FFFFFF"></input>
+                </div>
+            </div>
             <div id="qr-code"></div>
         </main>
     </body>
